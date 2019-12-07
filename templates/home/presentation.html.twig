@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+    <h1>Présentation et objectifs du Mooc</h1>
+    <h2>Contexte :</h2>
+    <ul>
+        <li>Des personnes atteintes de surdité,
+        <li>à des degrés très variables (malentendant, sévèrement sourd et complètement sourd)
+        <li>et aux incapacités très diverses,
+        <li>qui subsistent dans un «environnement d'entendants»,
+        <li>où la communication orale occupe une place très importante.
+    </ul>
+    <h3>Une problématique :</h3>
+    <p>Des échanges verbaux difficiles, parfois même impossibles pour ces personnes</p>
+    <h3>Mais pour que les personnes sourdes ou malentendantes puissent communiquer oralement :</p>
+    <ul>
+        <li>De nouveaux acteurs (Start-ups, PME) émergent,
+        <li>avec des solutions innovantes,
+        <li>mêlant à la fois: la technologie et l'humain.
+    </ul>
+    <h3>SAUF que ces nouvelles solutions :</h3>
+    <ul>
+        <li>ne fonctionnent pas dans toutes les situations,
+        <li>entraînant ainsi une certaine confusion/incompréhension.
+    </ul>
+    <h2>Objectifs :</h2>
+    <ol>
+        <li>Apporter des éléments de connaissance sur le handicap auditif.
+        <li>Appréhender les différents modes de communication des personnes sourdes afin de mieux comprendre leur réalité.
+        <li>Découvrir les solutions conçues pour communiquer verbalement avec une personne sourde selon le contexte (école, travail, réseau de la santé).
+        <li>Distinguer/comparer les différentes solutions de communication proposées.
+        <li>Réfléchir à la mise en place de ces solutions au sein d'une organisation.
+        <li>S’interroger sur la fiabilité/pérennité de ces solutions.
+    </ol>
+    <a class="bouton" href="{{ path('home_chiffres') }}">Commencez le Mooc</a>
+{% endblock %}

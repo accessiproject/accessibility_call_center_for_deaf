@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Quelques notions clés à connaître{% endblock %}
+
+{% block body %}
+    <h1>Quelques notions clés à connaître</h1>
+    <h2>Distinction entre une personne sourde oralisante et une personne sourde signante</h2>
+    <p>Pour information :</p>
+    <p>Une personne qui lit sur les lèvres ne comprend qu'environ 35% de ce qui est dit et doit deviner le reste en utilisant le contexte.</p>
+    <h2>L’expression «sourd et muet» :</h2>
+    <p>Une personne sourde n’a pas perdu l’usage de la parole. Elle a des troubles dans la communication orale : elle ne s’entend pas, elle peut avoir des défauts de prononciation, et ne peut quelquefois pas oraliser.</p>
+    <p>
+        <a class="bouton" href="{{ path('home_chiffres') }}">Précédent</a>&nbsp;&nbsp;&nbsp;
+        <a class="bouton" href="{{ path('home_focus') }}">Suivant</a>
+    </p>
+{% endblock %}

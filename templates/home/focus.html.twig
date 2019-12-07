@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Focus: rendre accessible la téléphonie pour les personnes sourdes ou malentendantes{% endblock %}
+
+{% block body %}
+    <h1>Focus: rendre accessible la téléphonie pour les personnes sourdes ou malentendantes</h1>
+    <table>
+        <tcaption>
+            <td colspan=4>Estimation de l’ARCEP</td>
+        </tcaption>
+        <tr>
+            <td colspan=4>Environ 5 millions de français qui sont sourds ou malentendants</td>
+        </tr>
+        <tr>
+            <td colspan=4>500 000 personnes ne pouvant téléphoner de façon autonome</td>
+        </tr>
+        <tr>
+            <td>332 000 utilisateurs privilégiant la lecture/écriture</td>
+            <td>75 000 utilisateurs privilégiant la LSF</td>
+            <td>10 000 utilisateurs privilégiant le LPC</td>
+            <td>80 000 personnes sourdes ne maîtriseraient pas suffisamment aucun mode de communication</td>
+        </tr>
+    </table>
+    <p>
+        En majorité, les personnes sourdes ne connaissent pas la langue des signes.</br>
+        Elles s'expriment à l'oral et lisent sur les lèvres de leur interlocuteur en face à face.</br>
+        Ils peuvent répondre mais pas forcément entendre correctement.</br>
+        Ex. une personne sourde demande le rendez-vous chez le médecin ; ce dernier lui propose un rendez-vous le lendemain à dix heures ; la personne sourde risque de répondre «oui très bien pour six heures».</br>
+        Mais au téléphone, la lecture labiale est impossible.</br>
+        Une transcription de la parole est donc nécessaire.
+    </p>
+    <p>
+        <a class="bouton" href="{{ path('home_notions') }}">Précédent</a>&nbsp;&nbsp;&nbsp;
+        <a class="bouton" href="rappel.php">Suivant</a>
+    </p>
+{% endblock %}

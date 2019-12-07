@@ -1,0 +1,84 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+    <h1>Quelques données chiffrées</h1>
+    <p>Environ 5 182 000 de déficients auditifs en France métropolitaine (89 pour 1 000 habitants)</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Chiffres</th>
+                <th>Classification</th>
+                <th>Situations concrètes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan=2>303 000 (6% des déficients auditifs) auraient une défiicience audiitive profonde ou totale.</td>
+                <td>Personnes classées «surdité complète»</td>
+                <td>Incapacité totale à entendre ce qui se dit dans une conversation</td>
+            </tr>
+            <tr>
+                <td>Personnes classées «malentendant»</td>
+                <td>Incapacité totale à entendre une conversation, même avec l’aide d’un appareil auditif</td>
+            </tr>
+            <tr>
+                <td rowspan=2>1 430 000 personnes (28% des déficients auditifs) auraient une déficience auditive moyenne à sévère.</td>
+                <td>Personnes classées «autre déficience auditive (bourdonnements, acouphènes...)»</td>
+                <td>Incapacité à entendre ce qui se dit dans une conversation</td>
+            </tr>
+            <tr>
+                <td>Personnes classées «déficience auditive non précisée»</td>
+                <td>Capacité à entendre ce qui se dit dans une conversation s’il n’y a qu’une personne qui parle et si elle parle fort, quelle que soit la modalité de leur déficience auditive</td>
+            </tr>
+            <tr>
+                <td rowspan=2>3 449 000 personnes (66% des déficients auditifs) auraient une déficience auditive légère à moyenne.</td>
+                <td>Personnes classées «déficience auditiive légère à moyenne»</td>
+                <td>Capacité à entendre ce qui se dit dans une conversation s’il n’y a qu’une personne qui parle même normalement</td>
+            </tr>
+            <tr>
+                <td>Personnes classées «malentendant», «autre déficience auditive», «déficience auditive non précisée»</td>
+                <td>Capacité à entendre une conversation sans difficultés</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>Cette population présente une grande diversité :</h2>
+    <ol>
+        <li>liée aux nombreux modes de communication utilisés : LSF (langue des signes française), LPC (langage parlé complété), écrit, voix</br>
+        <img src="" alt="Diagramme circulaire : Répartition des différents modes de communication des personnes atteintes d’une surdité sévère à totale (en %)">
+        <li>liée à l’âge d’apparition de troubles auditifs
+        <table>
+            <thead>
+                <th>Les personnes «devenues sourdes»</th>
+                <th>Les personnes sourdes «de naissance»</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>88%</td>
+                    <td>12%</td>
+                </tr>
+                <tr>
+                    <td>Pratiquent peu la lecture labiale et ne connaissent presque jamis la langue des signes</td>
+                    <td>Pour la plupart, la langue française risque d'être très souvent, à des degrés divers, une langue étrangère.
+                </tr>
+                <tr>
+                    <td>Maîtrisent bien le français (s’appuyent sur l’écrit) et l'environnement</td>
+                    <td>La moitié utilisant la LSF comme mode de communication privilégié ne lisent et n’écrivent pas le français.</td>
+                </tr>
+            </tbody>
+        </table>
+        <li>liée à d’autres handicaps : troubles de l’élocution (300 000 personnes sont aphasiques en France) ou déficience visuelle par exemple.
+    </ol>
+    <div class="ressources">
+        <h3>Ressources :</h3>
+        <ul>
+            <li><a href="https://solidarites-sante.gouv.fr/IMG/pdf/Corinne_ERHEL_rapport_Lexperimentation_dun_centre_relais_telephonique_pour_les_personnes_sourdes_ou_malentendantes_enjeux_et_avenir_16_juillet_2014.pdf">Rapport de Corinne Ehrel de 2014</a>
+            <li><a href="https://www.unisda.org/IMG/pdf/Etude_AGEFIPH-FIPHFP-ARCEP_100301.pdf">L’étude de 2010, « Évaluation des besoins des personnes sourdes ou malentendantes en matière d’accessibilité des services téléphoniques »)</a>
+        </ul>
+    </div>
+    <p>
+        <a class="bouton" href="{{ path('home_presentation') }}">Précédent</a>&nbsp;&nbsp;&nbsp;
+        <a class="bouton" href="{{ path('home_notions') }}">Suivant</a>
+    </p>
+{% endblock %}
