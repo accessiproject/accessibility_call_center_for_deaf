@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+    <h1>Solutions techniques proposées</h1>
+    <ul>
+        <li><a href="avec_intermediaire.php">Des solutions avec intermédiaire</a>
+        <li><a href="sans_intermediaire.php">Des solutions sans intermédiaire</a>
+        <li><a href="hybride.php">Des solutions dites «hybrides»</a>
+    </ul>
+    <p>
+        <a class="bouton" href="{{ path('home_juridique') }}">Précédent</a>&nbsp;&nbsp;&nbsp;
+        <a class="bouton" href="{{ path('home_contraintes') }}">Suivant</a>
+    </p>
+{% endblock %}

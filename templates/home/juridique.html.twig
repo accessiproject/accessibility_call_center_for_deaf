@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+    <h1>Bref rappel du cadre juridique</h1>
+    <strong>Loi pour une République Numérique</strong>
+    <div>
+        <h2>Article 105 de la loi du 7 octobre 2016 pour une République numérique</h2>
+        <p>Obligation, depuis le 8 octobre 2018, de rendre accessible aux personnes sourdes et malentendantes, les services clients de toutes les grandes entreprises (réalisant un chiffre d’affaires de plus de 250 millions d’euros) et des services publics ainsi que la mise en place par les opérateurs de communications électroniques d'une solution de téléphonie accessible.</p>
+    </div>
+    <div>
+        <h2>Dispositions du décret relatif à l'accès des personnes handicapées aux services téléphoniques</h2>
+        <ol>
+            <li>Interprètes titulaires du Master d'interprétation langue française (ou d'une maîtrise)</li>
+            <li>Traduction en/depuis LSF</li>
+            <li>Codeurs LPC titulaires de la licence professionnelle en codage en langue française parlée complétée</li>
+            <li>Traduction en/depuis LPC</li>
+            <li>Service de traduction écrite simultanée</li>
+            <li>Qualité de la transcription écrite simultanée (sous-titrage)</li>
+            <ul>
+                <li>500 caractères minimum par minute</li>
+                <li>Maximum 2 fautes d'orthographe et de grammaire par minute</li>
+            </ul>
+            <li>Plage horaire minimum 50%</li>
+            <li>Solution pour les aphasiques (via la synthèse vocale)</li>
+            <li>Solution pour les sourds et aveugles (en cours de développement)</li>
+            <li>Délai d'attente avant décrochage (2min)</li>
+            <li>Temps d'affichage : 5 secondes maximum</li>
+            <li>Nombre de caractères affichés par minute</li>
+        </ol>
+        <p>
+            <h3>Textes de référence</h3>
+            <ul>
+                <li><a href="https://www.legifrance.gouv.fr/eli/decret/2017/5/9/2017-875/jo/texte">Décret n° 2017-875 du 9 mai 2017 relatif à l'accès des personnes handicapées aux services téléphoniques</a></li>
+                <li><a href="https://www.legifrance.gouv.fr/eli/loi/2016/10/7/ECFI1524250L/jo/texte">Loi n° 2016-1321 du 7 octobre 2016 pour une République numérique</a></li>
+            </ul>
+        </p>
+        <p>
+            <a class="bouton" href="{{ path('home_focus') }}">Précédent</a>&nbsp;&nbsp;&nbsp;
+            <a class="bouton" href="{{ path('home_juridique') }}">Suivant</a>
+        </p>
+    </div>
+{% endblock %}

@@ -57,4 +57,34 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+
+    /**
+    * @Route("/bref-rappel-du-cadre-juridique", name="home_juridique")
+    */
+    public function juridique()
+    {
+        return $this->render('home/juridique.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
+
+    /**
+    * @Route("/solutions-techniques-proposees", name="home_solutions")
+    */
+    public function solutions()
+    {
+        return $this->render('home/solutions.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
+
+    /**
+    * @Route("/de-nouveaux-defis-a-relever", name="home_contraintes")
+    */
+    public function contraintes()
+    {
+        return $this->render('home/contraintes.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
 }
