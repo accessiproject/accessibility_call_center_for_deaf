@@ -1,13 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Bref rappel du cadre juridique{% endblock %}
 
 {% block body %}
     <h1>Bref rappel du cadre juridique</h1>
     <strong>Loi pour une République Numérique</strong>
     <div>
         <h2>Article 105 de la loi du 7 octobre 2016 pour une République numérique</h2>
-        <p>Obligation, depuis le 8 octobre 2018, de rendre accessible aux personnes sourdes et malentendantes, les services clients de toutes les grandes entreprises (réalisant un chiffre d’affaires de plus de 250 millions d’euros) et des services publics ainsi que la mise en place par les opérateurs de communications électroniques d'une solution de téléphonie accessible.</p>
+        <blockquote>Obligation, depuis le 8 octobre 2018, de rendre accessible aux personnes sourdes et malentendantes, les services clients de toutes les grandes entreprises (réalisant un chiffre d’affaires de plus de 250 millions d’euros) et des services publics ainsi que la mise en place par les opérateurs de communications électroniques d'une solution de téléphonie accessible.</blockquote>
     </div>
     <div>
         <h2>Dispositions du décret relatif à l'accès des personnes handicapées aux services téléphoniques</h2>
@@ -17,11 +17,13 @@
             <li>Codeurs LPC titulaires de la licence professionnelle en codage en langue française parlée complétée</li>
             <li>Traduction en/depuis LPC</li>
             <li>Service de traduction écrite simultanée</li>
-            <li>Qualité de la transcription écrite simultanée (sous-titrage)</li>
-            <ul>
-                <li>500 caractères minimum par minute</li>
-                <li>Maximum 2 fautes d'orthographe et de grammaire par minute</li>
-            </ul>
+            <li>
+                Qualité de la transcription écrite simultanée (sous-titrage)
+                <ul>
+                    <li>500 caractères minimum par minute</li>
+                    <li>Maximum 2 fautes d'orthographe et de grammaire par minute</li>
+                </ul>
+            </li>
             <li>Plage horaire minimum 50%</li>
             <li>Solution pour les aphasiques (via la synthèse vocale)</li>
             <li>Solution pour les sourds et aveugles (en cours de développement)</li>
@@ -38,7 +40,7 @@
         </p>
         <p>
             <a class="bouton" href="{{ path('home_focus') }}">Précédent</a>&nbsp;&nbsp;&nbsp;
-            <a class="bouton" href="{{ path('home_juridique') }}">Suivant</a>
+            <a class="bouton" href="{{ path('home_solutions') }}">Suivant</a>
         </p>
     </div>
 {% endblock %}

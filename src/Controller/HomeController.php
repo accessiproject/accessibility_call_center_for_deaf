@@ -87,4 +87,24 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+
+    /**
+    * @Route("/conseils-et-preconisations", name="home_preconisations")
+    */
+    public function preconisations()
+    {
+        return $this->render('home/preconisations.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
+
+    /**
+    * @Route("/innovations", name="home_innovations")
+    */
+    public function innovations()
+    {
+        return $this->render('home/innovations.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
 }

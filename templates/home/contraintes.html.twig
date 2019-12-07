@@ -1,14 +1,14 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}De nouveaux défis à relever{% endblock %}
 
 {% block body %}
     <h1>De nouveaux défis à relever</h1>
     <ol>
         <li>Des contraintes liées aux interprètes/transcripteurs : le nombre d’opérateurs et le rythme de formation actuel des opérateurs ne permettent pas de répondre à l’ensemble de la demande pour la transcription textuelle et pour la Langue des Signes Française (LSF).</br>
-        <citation>
-            Selon le directeur de DEAFI, une entreprise spécialiste de l’employabilité de travailleurs sourds ou malentendants: «si l’on respecte le ratio de télé-conseillers généralistes par habitants au niveau national, il faudrait créer en France 16 000 postes de vidéo-conseillers pour couvrir les besoins des personnes sourdes ou malentendantes».
-        </citation>
+            <p>
+                Selon le directeur de DEAFI, une entreprise spécialiste de l’employabilité de travailleurs sourds ou malentendants: <blockquote>«si l’on respecte le ratio de télé-conseillers généralistes par habitants au niveau national, il faudrait créer en France 16 000 postes de vidéo-conseillers pour couvrir les besoins des personnes sourdes ou malentendantes».</blockquote>
+        </p>
         <li>Des contraintes liées au coût du service relais, donnant lieu à une distinction entre :</br>
         <ul>
             <li>Les coûts de mise en œuvre (non-récurrents), soit les coûts relatifs à l’installation de la plateforme technique (achat des serveurs, des logiciels, etc.) et à la mise en place du service relais (formation des opérateurs, équipement et aménagement des cabines)</li>
@@ -26,11 +26,11 @@
             <li>Peur de l'inconnu,</li>
             <li>Réfractaire au changement,</li>
             <li>Pas spécialement le besoin</li>
-            <citation>
-                Déclaration d'Olivier Jeannel de la Start-up RogerVoice «Je n'ai pas créé cette application parce que moi, je veux téléphoner, mais parce que, vous, vous utilisez le téléphone.»
-            </citation>
+            <p>
+                Déclaration d'Olivier Jeannel de la Start-up RogerVoice <blockquote>«Je n'ai pas créé cette application parce que moi, je veux téléphoner, mais parce que, vous, vous utilisez le téléphone.»</blockquote>
+            </p>
             <p>
                 <a class="bouton" href="{{ path('home_solutions') }}">Précédent</a>&nbsp;&nbsp;&nbsp;
-                <a class="bouton" href="conseil.php">Suivant</a>
+                <a class="bouton" href="{{ path('home_preconisations') }}">Suivant</a>
             </p>
 {% endblock %}

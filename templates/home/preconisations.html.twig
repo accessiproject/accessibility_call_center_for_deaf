@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Conseils / préconisations{% endblock %}
+
+{% block body %}
+    <h1>Conseils / préconisations :</h1>
+    <ol>
+        <li>Dans une optique de réduction des coûts:
+        <ul>
+            <li>Mutualisation des coûts,
+            <li>Appels d'offres.
+        </ul>
+        <li>Dans une optique d’amélioration/de perfectionnement du service :</li>
+        <ul>
+            <li>Vérifiez si la qualité de service (délai d'attente, qualité de la transcription écrite, etc) est toujours aussi optimale,</li>
+            <li>Menez des expérimentations: encourager/soutenir l'innovation en testant ces solutions au sein des organisations = aiderait les acteurs,</li>
+            <li>Impliquez vos salariés/clients sourds (récupération des fedbacks),</li>
+        </ul>
+        <li>Pour faciliter la mise en place de ces solutions :</li>
+        <ul>
+            <li>Répartition des rôles/responsabilités (pour équiper une salle de conférence et/ou de réunion, etc).</li>
+        </ul>
+        <li>Aider les personnes sourdes (surtout ceux qui oralisent) à s'approprier/adopter ces nouveaux outils de communication technologiques
+        <ul>
+            <li>possibilité de proposer à vos collaborateurs ces nouvelles solutions en plus de la solution qu'ils ont l'habitude d'utiliser (permettrait de se familiariser progressivement avec ces outils</li>
+        </ul>
+    </ol>
+    <p>
+        <a class="bouton" href="{{ path('home_contraintes') }}">Précédent</a>&nbsp;&nbsp;&nbsp;
+        <a class="bouton" href="{{ path('home_innovations') }}">Suivant</a>
+    </p>
+{% endblock %}

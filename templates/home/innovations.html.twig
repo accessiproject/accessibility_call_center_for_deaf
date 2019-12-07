@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Innovations{% endblock %}
+
+{% block body %}
+    <h1>Innovations</h1>
+    <p>
+        À mesure que la technologie progresse, les fonctionnalités d'accessibilité s'améliorent.</br>
+        La synthèse et la reconnaissance vocale ont progressé et constitueront dans quelques années un atout majeur pour les personnes oralisantes.</br>
+        Si la reconnaissance vocale n’est pas encore totalement au point pour la langue française, notamment pour des personnes ayant des difficultés d’élocution, de nombreux projets fondés sur ces deux techniques se développent.</br>
+        Aujourd'hui, cette technologie est encore limitée car elle ne peut prendre en charge des traductions en direct (insuffisance de la taille de leur vocabulaire, difficultés à prendre en compte la complexité linguistique des phrases, etc.).</br>
+        D’autres projets innovants sont en réflexion.</br>
+        Exemple :</br>
+        <span lang="en">Microsoft Research Asia</span> développe avec le système Kinect, un dispositif pour traduire en direct la langue des signes en langue parlée, et vice-versa.</br>
+        Ce système capte une conversation des deux côtés :</br>
+        <ul>
+            
+            <li>Il affiche la personne qui signe d’un côté d’un écran, avec une traduction écrite et orale effectuée simultanément.</li>
+            <li>Inversement, les paroles de la personne parlante sont traduites en langue des signes et communiquées via un avatar sur l’autre partie de l’écran.</li>
+        </ul>
+        <p>
+            <a class="bouton" href="{{ path('home_preconisations') }}">Précédent</a>&nbsp;&nbsp;&nbsp;
+            <a class="bouton" href="{{ path('home_default') }}">Retour à la page d'accueil</a>
+        </p>
+{% endblock %}
