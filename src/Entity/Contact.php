@@ -71,6 +71,11 @@ class Contact
      */
     private $fonction;
 
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $accept;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -204,6 +209,18 @@ class Contact
     public function setFonction(?string $fonction): self
     {
         $this->fonction = $fonction;
+
+        return $this;
+    }
+
+    public function getAccept(): ?bool
+    {
+        return $this->accept;
+    }
+
+    public function setAccept(?bool $accept): self
+    {
+        $this->accept = $accept;
 
         return $this;
     }
