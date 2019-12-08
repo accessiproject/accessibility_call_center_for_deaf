@@ -27,8 +27,8 @@ class SendController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $company = $form['company']->getData() ? '<li>Organisme : ' . $form['company']->getData() . '</li>' : "";
             $fonction = $form['fonction']->getData() ? '<li>Fonction : ' . $form['fonction']->getData() . '</li>' : "";
-            $telephone = $form['telephone']->getData() ? '<li>N° téléphone : <a href="tel:' . $form['telephone']->getData() . '">' . $form['telephone']-getData() . '</a></li>' : "";
-            $mobile = $form['company']->getData() ? '<li>N° mobile : <a href="tel:' . $form['mobile']->getData() . '">' . $form['mobile']->getData() .  '</a></li>' : "";
+            $telephone = $form['telephone']->getData() ? '<li>N° téléphone : ' . $form['telephone']-getData() . '</li>' : "";
+            $mobile = $form['company']->getData() ? '<li>N° mobile : ' . $form['mobile']->getData() .  '</li>' : "";
             $message = (new \Swift_Message($form['object']->getData()))
                 ->setFrom($form['email']->getData())
                 ->setTo('kevin.bustamante@mail.novancia.fr')
@@ -45,6 +45,8 @@ class SendController extends AbstractController
                             <li>Prénom : ' . $form["firstname"]->getData() . '</li>
                             <li>Nom : ' . $form["lastname"]->getData() . '</li>' . $company . $fonction . '<li>Adresse email : <a href="mailto:' . $form["email"]->getData() . '">' . $form["email"]->getData() . '</a></li>' . $telephone . $mobile .
                         '</ul>
+                        <p>' . $form["message"]->getData() . '</p>
+
                 </body>
                 </html>
                 ', 'text/html');
