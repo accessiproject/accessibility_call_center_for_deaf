@@ -2,15 +2,20 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Entity\Contact;
+use App\Form\ContactType;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Swift_Mailer;
+use Symfony\Component\Console\Output\OutputInterface;
 
 class HomeController extends AbstractController
 {
     /**
-    * @Route("/", name="home_default") 
-    * @Route("/accueil", name="home_index")
-    */
+     * @Route("/", name="home_default") 
+     * @Route("/accueil", name="home_index")
+     */
     public function index()
     {
         return $this->render('home/index.html.twig', [
@@ -19,8 +24,8 @@ class HomeController extends AbstractController
     }
 
     /**
-    * @Route("/presentation-et-objectifs-du-mooc", name="home_presentation") 
-    */
+     * @Route("/presentation-et-objectifs-du-mooc", name="home_presentation") 
+     */
     public function presentation()
     {
         return $this->render('home/presentation.html.twig', [
@@ -29,8 +34,8 @@ class HomeController extends AbstractController
     }
 
     /**
-    * @Route("/quelques-chiffres", name="home_chiffres")
-    */
+     * @Route("/quelques-chiffres", name="home_chiffres")
+     */
     public function chiffres()
     {
         return $this->render('home/chiffres.html.twig', [
@@ -39,8 +44,8 @@ class HomeController extends AbstractController
     }
 
     /**
-    * @Route("/quelques-notions-cles-a-connaitre", name="home_notions")
-    */
+     * @Route("/quelques-notions-cles-a-connaitre", name="home_notions")
+     */
     public function notions()
     {
         return $this->render('home/notions.html.twig', [
@@ -49,8 +54,8 @@ class HomeController extends AbstractController
     }
 
     /**
-    * @Route("/rendre-accessible-la-telephonie-pour-les-personnes-sourdes-ou-malentendantes", name="home_focus")
-    */
+     * @Route("/rendre-accessible-la-telephonie-pour-les-personnes-sourdes-ou-malentendantes", name="home_focus")
+     */
     public function focus()
     {
         return $this->render('home/focus.html.twig', [
@@ -59,8 +64,8 @@ class HomeController extends AbstractController
     }
 
     /**
-    * @Route("/bref-rappel-du-cadre-juridique", name="home_juridique")
-    */
+     * @Route("/bref-rappel-du-cadre-juridique", name="home_juridique")
+     */
     public function juridique()
     {
         return $this->render('home/juridique.html.twig', [
@@ -69,8 +74,8 @@ class HomeController extends AbstractController
     }
 
     /**
-    * @Route("/solutions-techniques-proposees", name="home_solutions")
-    */
+     * @Route("/solutions-techniques-proposees", name="home_solutions")
+     */
     public function solutions()
     {
         return $this->render('home/solutions.html.twig', [
@@ -79,8 +84,8 @@ class HomeController extends AbstractController
     }
 
     /**
-    * @Route("/de-nouveaux-defis-a-relever", name="home_contraintes")
-    */
+     * @Route("/de-nouveaux-defis-a-relever", name="home_contraintes")
+     */
     public function contraintes()
     {
         return $this->render('home/contraintes.html.twig', [
@@ -89,8 +94,8 @@ class HomeController extends AbstractController
     }
 
     /**
-    * @Route("/conseils-et-preconisations", name="home_preconisations")
-    */
+     * @Route("/conseils-et-preconisations", name="home_preconisations")
+     */
     public function preconisations()
     {
         return $this->render('home/preconisations.html.twig', [
@@ -99,8 +104,8 @@ class HomeController extends AbstractController
     }
 
     /**
-    * @Route("/innovations", name="home_innovations")
-    */
+     * @Route("/innovations", name="home_innovations")
+     */
     public function innovations()
     {
         return $this->render('home/innovations.html.twig', [
