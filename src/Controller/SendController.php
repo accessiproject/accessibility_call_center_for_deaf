@@ -12,6 +12,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Email;
 
+
 class SendController extends AbstractController
 {
 
@@ -25,7 +26,7 @@ class SendController extends AbstractController
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $message = (new \Swift_Message('kevin'))
-                ->setFrom($form['address']->getData())
+                ->setFrom($form['email']->getData())
                 ->setTo('kevin.bustamante@mail.novancia.fr')
                 ->setBody("Hello", 'text/html');
             $mailer->send($message);

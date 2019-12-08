@@ -3,6 +3,10 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints\Email;
+use Symfony\Component\Validator\Constraints\IsFalse;
+use Symfony\Component\Validator\Constraints\NotBlank;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ContactRepository")
@@ -18,26 +22,34 @@ class Contact
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Attention! Le champs «prénom» est obligatoire.") 
      */
     private $firstname;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Attention! Le champs «nom» est obligatoire.") 
      */
     private $lastname;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Attention! Le champs «objet» est obligatoire.")  
      */
     private $object;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Attention! Le champs «adresse email» est obligatoire.")
+     * @Assert\Email(
+     * message = "Votre adresse email {{ value }} est invalide."
+     * )  
      */
     private $email;
 
     /**
      * @ORM\Column(type="text")
+     * @Assert\NotBlank(message="Attention! Le champs «message» est obligatoire.")  
      */
     private $message;
 
@@ -73,6 +85,9 @@ class Contact
 
     /**
      * @ORM\Column(type="boolean", nullable=true)
+     * @Assert\IsTrue(
+     * message = "Attention! Vous devez cocher cette case."
+     * )
      */
     private $accept;
 
