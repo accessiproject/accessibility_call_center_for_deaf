@@ -29,17 +29,47 @@ class Contact
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $subject;
+    private $object;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $address;
+    private $email;
 
     /**
      * @ORM\Column(type="text")
      */
     private $message;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $telephone;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $mobile;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $statut;
+
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $createdat;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $company;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $fonction;
 
     public function getId(): ?int
     {
@@ -70,26 +100,26 @@ class Contact
         return $this;
     }
 
-    public function getSubject(): ?string
+    public function getObject(): ?string
     {
-        return $this->subject;
+        return $this->object;
     }
 
-    public function setSubject(string $subject): self
+    public function setObject(string $object): self
     {
-        $this->subject = $subject;
+        $this->object = $object;
 
         return $this;
     }
 
-    public function getAddress(): ?string
+    public function getEmail(): ?string
     {
-        return $this->address;
+        return $this->email;
     }
 
-    public function setAddress(string $address): self
+    public function setEmail(string $email): self
     {
-        $this->address = $address;
+        $this->email = $email;
 
         return $this;
     }
@@ -102,6 +132,78 @@ class Contact
     public function setMessage(string $message): self
     {
         $this->message = $message;
+
+        return $this;
+    }
+
+    public function getTelephone(): ?string
+    {
+        return $this->telephone;
+    }
+
+    public function setTelephone(?string $telephone): self
+    {
+        $this->telephone = $telephone;
+
+        return $this;
+    }
+
+    public function getMobile(): ?string
+    {
+        return $this->mobile;
+    }
+
+    public function setMobile(?string $mobile): self
+    {
+        $this->mobile = $mobile;
+
+        return $this;
+    }
+
+    public function getStatut(): ?string
+    {
+        return $this->statut;
+    }
+
+    public function setStatut(string $statut): self
+    {
+        $this->statut = $statut;
+
+        return $this;
+    }
+
+    public function getCreatedat(): ?\DateTimeInterface
+    {
+        return $this->createdat;
+    }
+
+    public function setCreatedat(\DateTimeInterface $createdat): self
+    {
+        $this->createdat = $createdat;
+
+        return $this;
+    }
+
+    public function getCompany(): ?string
+    {
+        return $this->company;
+    }
+
+    public function setCompany(?string $company): self
+    {
+        $this->company = $company;
+
+        return $this;
+    }
+
+    public function getFonction(): ?string
+    {
+        return $this->fonction;
+    }
+
+    public function setFonction(?string $fonction): self
+    {
+        $this->fonction = $fonction;
 
         return $this;
     }
